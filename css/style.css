@@ -99,6 +99,26 @@ footer{
     text-align: center;
 }
 
+.contact a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin: 10px 15px 30px 15px;
+    opacity: 1;
+}
+.contact a:hover{
+    background-color: #475569;
+    color: #cbd5e1;
+    box-shadow: 0 0 20px  #475569;
+}
 @media screen and (min-width: 576px){
     main{
         justify-content: center;
@@ -124,7 +144,7 @@ footer{
         flex-flow: column-reverse;
     }
     .card p{
-        margin-top: 1rem;
+        margin-top: 0.25rem;
     }
 }
 
@@ -135,12 +155,27 @@ footer{
     .card:nth-child(2){
         order:-1;
     }
+    .contact a{
+        margin-top: 20px;
+    }
+    .card p{
+        margin-top: -10px;
+    }
+
 }
 
 @media screen and (min-width: 1200px){
     .card{
         width: min(33% - 1rem,500px);
+        padding: 3rem;
     }
+    .contact a{
+        margin-top: 20px;
+    }
+    .card p{
+        margin-top: -10px;
+    }
+
 }
 
 /* mobile landscape*/
@@ -166,5 +201,10 @@ footer{
     .card figcaption,
     .card p{
         font-size: 1rem;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
